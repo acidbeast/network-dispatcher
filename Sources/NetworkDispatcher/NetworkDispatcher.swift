@@ -19,7 +19,7 @@ public final class NetworkDispatcher<APIClientType: APIClient> {
     init (
         requestTimeout: TimeInterval = 10.0,
         cachePolicy: URLRequest.CachePolicy = .reloadIgnoringLocalAndRemoteCacheData,
-        session: URLSession,
+        session: URLSession = .shared,
         logger: NetworkLoggerProtocol = NetworkLogger.init()
     ) {
         self.timeoutInterval = requestTimeout
