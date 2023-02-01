@@ -1,2 +1,3 @@
-# network-dispatcher
-Swift Network Dispatcher
+# NetworkDispatcher
+
+A description of this package.
