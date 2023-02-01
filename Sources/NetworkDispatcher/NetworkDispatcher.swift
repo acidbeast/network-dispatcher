@@ -28,7 +28,7 @@ public final class NetworkDispatcher<APIClientType: APIClient> {
         self.logger = logger
     }
       
-    func request(
+    public func request(
         _ apiClient: APIClientType,
         completion: @escaping (NetworkResult<NetworkResponse, NetworkError>) -> ()
     ) {
@@ -62,7 +62,7 @@ public final class NetworkDispatcher<APIClientType: APIClient> {
         self.task?.resume()
     }
     
-    func handle<DataType: Decodable>(
+    public func handle<DataType: Decodable>(
         result: NetworkResult<NetworkResponse, NetworkError>,
         onSuccess: @escaping (DataType) -> Void,
         onError: ((NetworkError) -> Void)? = nil
@@ -136,7 +136,7 @@ public final class NetworkDispatcher<APIClientType: APIClient> {
         }
     }
     
-    func cancel() {
+    public func cancel() {
         self.task?.cancel()
     }
     
