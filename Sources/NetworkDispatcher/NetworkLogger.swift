@@ -13,6 +13,9 @@ public protocol NetworkLoggerProtocol {
 }
 
 public final class NetworkLogger: NetworkLoggerProtocol {
+    
+    public init() {}
+    
     public func log(request: URLRequest) {
         print("------------ REQUEST -------------")
         defer { print("---------------------------------- \n") }

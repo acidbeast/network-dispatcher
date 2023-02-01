@@ -16,7 +16,7 @@ public final class NetworkDispatcher<APIClientType: APIClient> {
     
     private var task: URLSessionTask?
     
-    init (
+    public init (
         requestTimeout: TimeInterval = 10.0,
         cachePolicy: URLRequest.CachePolicy = .reloadIgnoringLocalAndRemoteCacheData,
         session: URLSession = .shared,
